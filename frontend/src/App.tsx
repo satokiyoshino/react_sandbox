@@ -1,3 +1,5 @@
+import styles from './App.module.scss';
+
 export const App = () => {
-  return <>App</>;
+  return <div className={styles.title}>App</div>;
 };

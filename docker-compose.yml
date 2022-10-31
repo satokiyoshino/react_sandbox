@@ -1,0 +1,12 @@
+version: '3'
+services:
+  frontend:
+    image: node:18.3.0-slim
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+    command: 'bash'
+    ports:
+      - '3000:3000'
+      - '6006:6006'
+    tty: true

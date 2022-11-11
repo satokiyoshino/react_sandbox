@@ -1,14 +1,16 @@
-import { UserList } from "./components/userList";
-import { UserDetail } from "./components/userDetail";
+import { BrowserRouter } from "react-router-dom";
 import { RecoilRoot } from 'recoil';
+
+import { UserRouter } from "./components/userRouter";
 
 export const App = () => {
   return (
     <>
-      <RecoilRoot>
-        <UserList></UserList>
-        <UserDetail></UserDetail>
-      </RecoilRoot>
+      <BrowserRouter>
+        <RecoilRoot>
+          <UserRouter></UserRouter>
+        </RecoilRoot>
+      </BrowserRouter>
     </>
   );
 };

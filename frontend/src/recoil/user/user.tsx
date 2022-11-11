@@ -1,19 +1,33 @@
 import { atom } from 'recoil';
 
-type User = {
-    // TODO：ここの解説をしてもらう
-    // map?(arg0: (info: any) => JSX.Element): import("react").ReactNode;
-    [x: string]: any;
-    id: number | null;
+// type UserList = {
+//     id: string | null;
+//     name: string;
+// };
+type UserList = {
+    id: string;
+    name: string;
+};
+
+type UserDetail = {
+    id: string | null;
     name: string;
     username: string;
     email: string;
 };
 
-export const userState = atom<User>({
-    key: 'atom/user',
+export const userListState = atom<UserList>({
+    key: 'atom/userList',
     default: {
-        id: null,
+        id: '',
+        name: ''
+    },
+});
+
+export const userDetailState = atom<UserDetail>({
+    key: 'atom/userDetail',
+    default: {
+        id: '',
         name: '',
         username: '',
         email: ''

@@ -1,16 +1,12 @@
 import { atom } from 'recoil';
 
-// type UserList = {
-//     id: string | null;
-//     name: string;
-// };
 type UserList = {
     id: string;
     name: string;
 };
 
 type UserDetail = {
-    id: string | null;
+    id: string;
     name: string;
     username: string;
     email: string;

@@ -1,14 +1,13 @@
 import { useNavigate } from "react-router-dom";
 
-import { useUserDetail } from '../../hooks/useUserDetail';
+import { PostList } from '../postList';
 
-import { usePostDetail } from '../../hooks/usePostDetail';
+import { useUserDetail } from '../../hooks/useUserDetail';
 
 type props = {};
 
 export const UserDetail = () => {
     const [userInfo] = useUserDetail();
-    const [postInfo] = usePostDetail();
     const navigate = useNavigate();
 
     return (
@@ -21,8 +20,7 @@ export const UserDetail = () => {
                 <li>E-mailは「{userInfo.email}」</li>
             </ul>
 
-            <p>投稿のタイトルは「{postInfo.title}」</p>
-            <button onClick={() => navigate(`/posts/${postInfo.id}`)}>POST</button><br />
+            <PostList />
 
             <div>
                 <button onClick={() => navigate('/')}>トップページに戻る</button>

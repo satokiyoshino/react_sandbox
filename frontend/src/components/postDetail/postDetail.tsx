@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
 import { usePostDetail, useUserNameSearch } from '../../hooks/usePostDetail';
-import { useUserDetail } from '../../hooks/useUserDetail';
 
 export const PostDetail = () => {
 

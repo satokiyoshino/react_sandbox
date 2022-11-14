@@ -40,5 +40,5 @@ export const useUserNameSearch = () => {
         fetchUser();
     }, [id, post]);
 
-    return [user, post];
+    return [user];
 }

@@ -5,7 +5,7 @@ import { usePostDetail, useUserNameSearch } from '../../hooks/usePostDetail';
 export const PostDetail = () => {
 
     const [postInfo] = usePostDetail();
-    const [userName, _] = useUserNameSearch();
+    const [userName] = useUserNameSearch();
     const navigate = useNavigate();
 
 

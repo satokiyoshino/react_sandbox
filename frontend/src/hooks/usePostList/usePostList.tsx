@@ -1,14 +1,13 @@
 import { useEffect } from 'react';
-import { useParams } from "react-router-dom";
 
 import { useRecoilState } from 'recoil';
 import { PostListState } from '../../recoil/post';
-
+import { userDetailState } from '../../recoil/user';
 
 export const usePostList = () => {
     const [post, setPost] = useRecoilState(PostListState);
-
-    const { id } = useParams();
+    const [user] = useRecoilState(userDetailState);
+    const id = user.id;
 
     useEffect(() => {
         const fetchUser = async () => {
